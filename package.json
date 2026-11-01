@@ -1,14 +1,17 @@
 {
   "name": "runyth-cycle-token",
-  "private": true,
   "version": "0.2.6",
+  "private": true,
   "type": "module",
+  "description": "Development checks for Runyth Cycle Token, which cycles or directly selects token artwork from the Token HUD with wildcard, prototype, and gallery support.",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "check": "python3 tools/build-runtime.py --check && node tools/check-syntax.mjs && npm test"
+    "check": "node tools/check.mjs && python3 tools/build-runtime.py --check && node tools/check-syntax.mjs && npm test && npm run build && npm run verify:release",
+    "build": "node tools/build.mjs",
+    "verify:release": "node tools/verify-release.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.13.0 <27"
   },
-  "license": "GPL-3.0-or-later"
+  "license": "AGPL-3.0-or-later"
 }
