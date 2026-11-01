@@ -151,6 +151,23 @@ Use Node.js 20+ to run `npm run check` in the source directory (57 mocked/static
 - [Foundry v13 TokenDocument API](https://foundryvtt.com/api/v13/classes/foundry.documents.TokenDocument.html)
 - [Foundry v13 Actor API](https://foundryvtt.com/api/v13/classes/foundry.documents.Actor.html)
 
+## Releases
+
+The GitHub repository is
+[`Runyth/foundry-runyth-cycle-token`](https://github.com/Runyth/foundry-runyth-cycle-token).
+Every release attaches:
+
+```text
+runyth-cycle-token-v<version>-mod.zip
+runyth-cycle-token-v<version>-src.zip
+runyth-cycle-token-v<version>-doc.zip
+module.json
+runyth-cycle-token-v<version>-SHA256SUMS.txt
+```
+
+The `module.json` manifest download URL points at the matching release's installable
+archive, and the marked Latest release is always the highest published version.
+
 ## Licence
 Copyright © 2026  [Daniel Braniewski](https://brani.dev/)
 
