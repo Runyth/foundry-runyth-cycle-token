@@ -1,0 +1,204 @@
+{
+  "RCT": {
+    "Settings": {
+      "enableHud": {
+        "name": "Token-HUD-Schaltfläche aktivieren",
+        "hint": "Steuerelement auf bearbeitbaren Token anzeigen."
+      },
+      "allowOwners": {
+        "name": "Besitzende Spieler zulassen",
+        "hint": "Spieler mit Besitzrechten am Token und Quellakteur dürfen Bilder ändern. Spielleiter immer."
+      },
+      "syncCurrent": {
+        "name": "Aktuellen Token aktualisieren",
+        "hint": "Bild des gewählten Token sofort ändern."
+      },
+      "syncPrototype": {
+        "name": "Prototyp-Token aktualisieren",
+        "hint": "Bild des Prototyp-Tokens des Quellakteurs aktualisieren."
+      },
+      "syncScene": {
+        "name": "Weitere Token der Szene aktualisieren",
+        "hint": "Optional: weitere Token desselben Akteurs und Verbindungstyps auf der aktiven Szene aktualisieren."
+      },
+      "wildcardPolicy": {
+        "name": "Nativen Wildcard-Prototyp behandeln",
+        "hint": "Gewähltes Bild übernehmen und Zufallsmodus deaktivieren oder Wildcard-Prototyp bewahren."
+      },
+      "wildcard": {
+        "selected": "Gewähltes Bild verwenden",
+        "preserve": "Wildcard-Prototyp bewahren"
+      },
+      "maxImages": {
+        "name": "Maximale Bilder in Galerie",
+        "hint": "Begrenzt die Bildanzahl in der Galerie."
+      },
+      "hudIcon": {
+        "name": "Symbol der Token-HUD-Schaltfläche",
+        "hint": "Symbol oder Emoji für das Token-HUD auswählen (Standard: 🃏). Wird das 🎭-Symbol von Cycle Portrait angezeigt, erscheint Cycle Token direkt darüber."
+      },
+      "showImageNames": {
+        "name": "Bildnamen unter Vorschaubildern anzeigen",
+        "hint": "Browserbezogene Einstellung, standardmäßig aus. Bei einfacher Bildauswahl hier einstellen; in der erweiterten Ansicht auch direkt im Fenster. Ein Ansichtswechsel setzt die Einstellung nicht zurück."
+      },
+      "tooltipMode": {
+        "name": "Tooltip bei Bildberührung",
+        "hint": "Text festlegen, der beim Überfahren eines Bildes angezeigt wird. Standard: Bildname ohne Dateiendung."
+      },
+      "tooltip": {
+        "stem": "Bildname (ohne Endung)",
+        "filename": "Dateiname (mit Endung)",
+        "path": "Vollständiger Bildpfad",
+        "none": "Keine Tooltips"
+      },
+      "icon": {
+        "images": "Bildstapel",
+        "film": "Filmstreifen",
+        "palette": "Malerpalette",
+        "rotate": "Kreispfeile",
+        "image": "Einzelbild",
+        "stack": "Illustrierter Tokenstapel (SVG)",
+        "cycle": "Illustrierter wechselnder Token (SVG)",
+        "frame": "Illustrierter Tokenrahmen (SVG)",
+        "theatre": "🎭 Theatermasken",
+        "art": "🎨 Malerpalette",
+        "emojiCycle": "🔄 Wechselpfeile",
+        "camera": "📸 Kamera",
+        "emojiFrame": "🖼️ Gerahmtes Bild",
+        "joker": "🃏 Jokerkarte (Standard)"
+      },
+      "advancedMenu": {
+        "name": "Erweiterte Bildauswahl verwenden",
+        "hint": "Einstellung pro Spieler. Aus (Standard): nur Suche, Regex-Schalter und Vorschaubilder. Ein: Navigation, Aktualisieren, Hilfe, Aktualisierungsziele, Bildnamen-Schalter und Bildpfad. Bestehende Einstellungen für Bildnamen bleiben erhalten."
+      },
+      "thumbnailSize": {
+        "name": "Vorschaubildgröße (pro Spieler)",
+        "hint": "Größe der Bildvorschauen im Token-Auswahlfenster anpassen (85–245 px). Größere Bilder bedeuten automatisch weniger Bilder pro Zeile und Spalte. Gilt nur für deinen Benutzer in dieser Welt."
+      },
+      "windowOpacity": {
+        "name": "Deckkraft des Bildauswahlfensters (pro Spieler)",
+        "hint": "Nur den Fensterhintergrund einstellen (0–100 %). Bei 0 % ist der Hintergrund vollständig transparent, Bilder und Bedienelemente bleiben deckend. Geöffnete Fenster werden direkt aktualisiert."
+      }
+    },
+    "Ui": {
+      "open": "Tokenbild wechseln",
+      "previous": "Zurück",
+      "next": "Weiter",
+      "refresh": "Aktualisieren",
+      "help": "Hilfe",
+      "close": "Schließen",
+      "noToken": "Kein Token",
+      "count": "{count} Bilder",
+      "applied": "Aktualisierte Szenen-Token: {live}; aktualisierter Akteur-Prototyp: {prototype}.",
+      "loading": "Bilder werden geladen …",
+      "search": "Bilder nach Dateinamen filtern",
+      "gallery": "Verfügbare Tokenbilder",
+      "noMatches": "Keine passenden Bilder.",
+      "imageSource": "Aktuelles Tokenbild",
+      "more": "Mehr anzeigen ({count} verbleibend)",
+      "showNames": "Bildnamen unter Vorschaubildern anzeigen",
+      "refreshHint": "Bildliste aus der Quelle neu einlesen und den kurzzeitigen Listen-Cache umgehen. Tokenbilder bleiben unverändert.",
+      "refreshed": "Bildliste aktualisiert. Keine Tokenbilder geändert.",
+      "destinationHeading": "Bei Bildauswahl werden aktualisiert:",
+      "targetCurrent": "dieser Token auf der aktiven Szene",
+      "targetScene": "weitere passende Token auf dieser Szene",
+      "targetPrototype": "der Akteur-Prototyp (Standardbild für künftig platzierte Token)",
+      "noDestinations": "kein aktives Ziel; Spielleitung muss ein Ziel aktivieren",
+      "preferenceFailed": "Anzeigeeinstellung konnte nicht gespeichert werden",
+      "regexEnable": "Reguläre Ausdrücke aktivieren (ohne Groß-/Kleinschreibung)",
+      "regexDisable": "Reguläre Ausdrücke deaktivieren; einfache Teilwortsuche verwenden",
+      "regexError": {
+        "invalid": "Ungültiger regulärer Ausdruck. Suchmuster korrigieren.",
+        "tooLong": "Regulärer Ausdruck ist zu lang (maximal 160 Zeichen).",
+        "unsafe": "Potentiell aufwendiger regulärer Ausdruck. Muster vereinfachen."
+      }
+    },
+    "Config": {
+      "title": "Runyth Cycle Token",
+      "path": "Optionales Bild oder Wildcard-Muster",
+      "placeholder": "tokens/held/Body_Held_*.webp",
+      "hint": "Optionale Überschreibung, solange die native zufällige Wildcard-Funktion AUS ist. Ist sie eingeschaltet, hat das native Wildcard-Muster immer Vorrang. Wird getrennt vom Bildpfad gespeichert.",
+      "save": "Muster speichern",
+      "browse": "Bild auswählen",
+      "reset": "Überschreibung entfernen",
+      "saved": "Bildquelle gespeichert."
+    },
+    "Errors": {
+      "noPermission": "Keine Berechtigung, diesen Token und seinen Quellakteur zu bearbeiten.",
+      "noImages": "Keine unterstützten Bilder gefunden. Muster und Dateiberechtigungen prüfen.",
+      "remotePattern": "Externe URLs können nicht als Wildcard-Ordner durchsucht werden.",
+      "notImage": "Eine konkrete Bilddatei mit unterstützter Endung wählen.",
+      "notListed": "Das Bild ist nicht in der konfigurierten Auswahl. Galerie neu laden.",
+      "staleToken": "Token befindet sich nicht mehr auf der aktiven Szene.",
+      "nothingEnabled": "Alle relevanten Aktualisierungsziele sind deaktiviert.",
+      "badPattern": "Eine Bilddatei oder ein Wildcard-Muster (z. B. token_*.png) angeben.",
+      "rollbackIncomplete": "Einige Änderungen konnten nicht rückgängig gemacht werden. Token- und Prototypbilder prüfen und gegebenenfalls manuell korrigieren."
+    },
+    "Help": {
+      "quickstart": {
+        "title": "Bild auswählen",
+        "body": "Rechtsklick auf einen bearbeitbaren Token und „Cycle Token“ auswählen. Standardmäßig erscheinen nur Suchfeld, Regex-Schalter und Bilder; ein Klick wendet das Bild sofort an. Die Spielleitung kann die erweiterte Ansicht unter „Einstellungen konfigurieren“ aktivieren. Filtern verändert keine Token-Daten."
+      },
+      "refresh": {
+        "title": "Was bedeutet Aktualisieren?",
+        "body": "Aktualisieren liest den konfigurierten Bildordner oder das Wildcard-Muster neu ein und umgeht den kurzfristigen Listen-Cache (normalerweise 15 Sekunden). Nach Hinzufügen, Löschen oder Umbenennen von Dateien verwenden. Keine Token- oder Akteurbilder werden geändert; der Bildcache des Browsers und Einstellungen bleiben erhalten."
+      },
+      "destinations": {
+        "title": "Wo wird das neue Bild übernommen?",
+        "body": "Aktueller Szenen-Token bedeutet der bereits auf der aktiven Szene platzierte Token. Akteur-Prototyp ist das Standardbild für künftig platzierte Token; bereits platzierte Token ändern sich dadurch nicht automatisch. Weitere Szenen-Token (standardmäßig aus) aktualisiert passende Token desselben Akteurs auf der aktiven Szene, aber nur bei aktivierter Aktualisierung des aktuellen Tokens. Token auf anderen Szenen bleiben unverändert. Die Zielanzeige oberhalb der Galerie zeigt die konfigurierten Auswirkungen."
+      },
+      "pattern": {
+        "title": "Passende Bilder wählen",
+        "body": "Unter Akteur → Prototyp-Token → Erscheinungsbild kann ein separates Bild oder Wildcard-Muster gespeichert werden (z. B. Body_Held_*.webp). Leer verwendet die aktivierte native Zufalls-Wildcard oder den Ordner des aktuellen Tokenbilds. Nur Speichern ändert das Muster."
+      },
+      "wildcard": {
+        "title": "Native Wildcard-Zufallsbilder",
+        "body": "Native Foundry-Wildcards haben Vorrang vor optionalen Runyth-Bildmustern. Für zufällige Bilder: Akteursbogen → Prototyp-Token → Aussehen → Token-Bildpfad mit Wildcard (z. B. tokens/Held_*.webp) und die Zufallsauswahl einschalten. Die Bilder werden über Foundrys Wildcard-Funktion aufgelöst. „Wildcard-Prototyp bewahren“ ist Standard und ändert nur den Live-Token; die native Zufallsauswahl bleibt aktiv. Erst „Gewähltes Bild verwenden“ deaktiviert sie bei der Auswahl."
+      },
+      "permissions": {
+        "title": "Berechtigungen",
+        "body": "Spielleitungen dürfen passende Token bearbeiten. Spieler benötigen Besitzrechte am Szenen-Token und Quellakteur sowie die Freigabe der Spielleitung. Die Installation verändert keine Bilder. Das Akteur-Porträt wird niemals geändert."
+      },
+      "preferences": {
+        "title": "Bildnamen, Tooltips und HUD-Symbole",
+        "body": "Unter „Einstellungen konfigurieren“ werden einfache/erweiterte Ansicht und Bildnamen (standardmäßig ausgeblendet) eingestellt. In der erweiterten Ansicht sind Bildnamen-Schalter und Hilfe auch im Fenster. Der Ansichtswechsel erhält die Bildnamen-Einstellung. Der kleine Stern neben der Suche schaltet zwischen einfacher Teilwortsuche (Standard) und regulären Ausdrücken um; die Einstellung wird pro Browser gespeichert. Ungültige oder zu komplexe Ausdrücke werden ohne Bildänderung abgelehnt. Tooltips zeigen standardmäßig Bildnamen ohne Endung. HUD-Symbole und Fenstergrößen können ebenfalls in den Einstellungen angepasst werden."
+      }
+    },
+    "Layout": {
+      "menuName": "Fensterpositionen und -größen zurücksetzen",
+      "menuLabel": "Fensterlayout öffnen",
+      "menuHint": "Bildauswahl oder Hilfe unabhängig auf die Standardgröße und Bildschirmmitte zurücksetzen. Einstellungen gelten für diesen Browser.",
+      "description": "Fenstergröße und -position zurücksetzen. Die Hilfe startet quadratisch (560 × 560). Beim Schließen werden Position und Größe gespeichert.",
+      "picker": "Bildauswahlfenster",
+      "help": "Hilfefenster (quadratischer Standard)",
+      "reset": "Zurücksetzen",
+      "done": "Fensterlayout zurückgesetzt."
+    },
+    "HelpMenu": {
+      "name": "Cycle Token-Hilfe",
+      "label": "Hilfe öffnen",
+      "hint": "Öffnet das größenveränderbare Hilfefenster, auch bei aktivierter einfacher Bildauswahl."
+    },
+    "Thumbnail": {
+      "menuName": "Vorschaubild-Abmessungen (pro Spieler)",
+      "menuLabel": "Vorschaubildgrößen einstellen",
+      "menuHint": "Breite und Höhe gemeinsam einstellen oder separate Regler aktivieren. Gilt nur für diesen Benutzer in dieser Welt.",
+      "description": "Bestimme die Größe der Vorschaubilder im Token-Bildwähler. Standardmäßig verändert ein Regler Breite und Höhe gemeinsam. Das Seitenverhältnis der Bilder bleibt erhalten.",
+      "advanced": "Separate Regler für Breite und Höhe verwenden",
+      "both": "Breite und Höhe",
+      "width": "Breite",
+      "height": "Höhe",
+      "hint": "85–245 px je Achse. Größere Kacheln zeigen weniger Bilder nebeneinander und untereinander. Die Vorschau aktualisiert sich sofort; Tokenbilder werden nicht verändert."
+    },
+    "Empty": {
+      "title": "Keine Tokenbilder gefunden",
+      "intro": "Bildquelle für diesen Akteur einrichten:",
+      "open": "Akteursbogen öffnen und Prototyp-Token → Aussehen auswählen.",
+      "path": "Unter Token-Bildpfad ein gültiges Bild oder ein Wildcard-Muster wie tokens/held/Body_*.webp eintragen.",
+      "wildcard": "Für mehrere Varianten „Wildcard-Bilder zufällig auswählen“ aktivieren und das Wildcard-Muster im Token-Bildpfad belassen.",
+      "files": "Passende PNG-, WEBP-, JPG-, GIF-, AVIF- oder SVG-Dateien im entsprechenden Foundry-Datenordner ablegen. Leserechte sind erforderlich.",
+      "reload": "Bildauswahl schließen und erneut öffnen oder in der erweiterten Ansicht „Aktualisieren“ auswählen. Dadurch wird kein Tokenbild geändert.",
+      "alternative": "Ohne zufälligen Prototyp können mehrere Bilder neben dem aktuellen Tokenbild liegen. Alternativ lässt sich ein Runyth-Muster direkt im Inhaltsbereich des Prototyp-Token-Reiters „Aussehen“ festlegen."
+    }
+  }
+}

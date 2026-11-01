@@ -1,0 +1,34 @@
+{
+  "id": "runyth-cycle-token",
+  "title": "Runyth Cycle Token",
+  "description": "Cycle or select token artwork with configurable live-token and prototype-token synchronization, wildcard patterns, and a responsive gallery.",
+  "version": "0.2.6",
+  "authors": [
+    {
+      "name": "Runyth"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": [
+    "scripts/runtime.mjs"
+  ],
+  "styles": [
+    "styles/runyth-cycle-token.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsch",
+      "path": "lang/de.json"
+    }
+  ],
+  "license": "GPL-3.0-or-later"
+}

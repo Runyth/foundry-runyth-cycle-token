@@ -1,0 +1,204 @@
+{
+  "RCT": {
+    "Settings": {
+      "enableHud": {
+        "name": "Enable Token HUD button",
+        "hint": "Display the Cycle Token control on editable tokens."
+      },
+      "allowOwners": {
+        "name": "Allow owning players",
+        "hint": "Permit players who own the scene token and its source Actor to cycle images. GMs are always allowed."
+      },
+      "syncCurrent": {
+        "name": "Update current live token",
+        "hint": "Immediately update the token used to open the gallery."
+      },
+      "syncPrototype": {
+        "name": "Update Actor prototype token",
+        "hint": "Update the original Actor's prototype token image when a new image is selected."
+      },
+      "syncScene": {
+        "name": "Also update matching tokens on the current scene",
+        "hint": "Opt-in: update other tokens of the same Actor and linkage type on the active scene (subject to permissions)."
+      },
+      "wildcardPolicy": {
+        "name": "Existing native wildcard prototype",
+        "hint": "Selected image: replace the prototype with the chosen image and disable native random-image mode. Preserve: leave random prototype artwork unchanged."
+      },
+      "wildcard": {
+        "selected": "Use selected image",
+        "preserve": "Preserve wildcard prototype"
+      },
+      "maxImages": {
+        "name": "Maximum images per gallery",
+        "hint": "Limits images rendered and stored in the short-lived cache. Increase for large token collections."
+      },
+      "hudIcon": {
+        "name": "Token HUD button icon",
+        "hint": "Choose a vector icon or emoji for the Token HUD control (default: 🃏). If Cycle Portrait also shows its 🎭 control, Cycle Token appears directly above it."
+      },
+      "showImageNames": {
+        "name": "Show image names below thumbnails",
+        "hint": "Per-browser preference, off by default. In the simple picker, configure it here; in advanced view, also toggle it in the picker. Switching views never resets it."
+      },
+      "tooltipMode": {
+        "name": "Thumbnail hover tooltip",
+        "hint": "Choose which text, if any, appears when hovering over an image. Defaults to its name without file extension."
+      },
+      "tooltip": {
+        "stem": "Image name (without extension)",
+        "filename": "Filename (with extension)",
+        "path": "Full image path",
+        "none": "Disable tooltips"
+      },
+      "icon": {
+        "images": "Image stack",
+        "film": "Film strip",
+        "palette": "Artist palette",
+        "rotate": "Circular arrows",
+        "image": "Single image",
+        "stack": "Illustrated token stack (SVG)",
+        "cycle": "Illustrated rotating token (SVG)",
+        "frame": "Illustrated token frame (SVG)",
+        "theatre": "🎭 Theatre masks",
+        "art": "🎨 Artist palette",
+        "emojiCycle": "🔄 Cycle arrows",
+        "camera": "📸 Camera",
+        "emojiFrame": "🖼️ Framed image",
+        "joker": "🃏 Joker card (default)"
+      },
+      "advancedMenu": {
+        "name": "Use advanced image picker",
+        "hint": "Per-player preference. Off (default): only search, regex toggle and thumbnails. On: navigation, Refresh, Help, update destinations, caption toggle and image path. Existing caption preferences remain unchanged."
+      },
+      "thumbnailSize": {
+        "name": "Thumbnail size (per player)",
+        "hint": "Resize image previews in your token picker. 85–245 px; larger previews automatically fit fewer columns and rows. Applies to your user in this world, not other players."
+      },
+      "windowOpacity": {
+        "name": "Image picker window opacity (per player)",
+        "hint": "Adjust only the window background (0–100%). At 0% the background is fully transparent, but thumbnails and controls remain opaque. Updates open windows immediately."
+      }
+    },
+    "Ui": {
+      "open": "Cycle token image",
+      "previous": "Previous",
+      "next": "Next",
+      "refresh": "Refresh",
+      "help": "Help",
+      "close": "Close",
+      "noToken": "No token",
+      "count": "{count} images",
+      "applied": "Updated scene tokens: {live}; updated Actor prototype: {prototype}.",
+      "loading": "Loading images…",
+      "search": "Filter images by filename",
+      "gallery": "Available token images",
+      "noMatches": "No images match the filter.",
+      "imageSource": "Current token image",
+      "more": "Show more ({count} remaining)",
+      "showNames": "Show image names under thumbnails",
+      "refreshHint": "Reload the image list from storage, bypassing the short-lived list cache. Does not change any token image.",
+      "refreshed": "Image list refreshed. No token images were changed.",
+      "destinationHeading": "When you select an image, it updates:",
+      "targetCurrent": "this token on the active scene",
+      "targetScene": "other matching tokens on this scene",
+      "targetPrototype": "the Actor prototype (default artwork for tokens placed later)",
+      "noDestinations": "no available destination; ask the GM to enable a target",
+      "preferenceFailed": "Could not save display preference",
+      "regexEnable": "Enable regular expression search (case-insensitive)",
+      "regexDisable": "Disable regular expression search; use plain substring matching",
+      "regexError": {
+        "invalid": "Invalid regular expression. Correct the search pattern.",
+        "tooLong": "Regular expression is too long (maximum 160 characters).",
+        "unsafe": "Potentially expensive regular expression. Simplify the pattern."
+      }
+    },
+    "Config": {
+      "title": "Runyth Cycle Token",
+      "path": "Optional image or wildcard pattern",
+      "placeholder": "tokens/hero/Body_Hero_*.webp",
+      "hint": "Optional override used when Foundry's native random wildcard mode is OFF. When it is ON, Foundry's wildcard always wins. Saved separately from Foundry's Image Path.",
+      "save": "Save pattern",
+      "browse": "Choose image",
+      "reset": "Clear override",
+      "saved": "Cycle Token image source saved."
+    },
+    "Errors": {
+      "noPermission": "You do not have permission to change this token and its source Actor.",
+      "noImages": "No supported images were found. Check the pattern and file-browser permissions.",
+      "remotePattern": "Remote URLs cannot be browsed as wildcard folders; use a single URL.",
+      "notImage": "Select a concrete image file with a supported extension.",
+      "notListed": "The image is not in the current Actor's configured image set. Refresh the gallery.",
+      "staleToken": "The selected token is no longer present on the current scene.",
+      "nothingEnabled": "All applicable token-update targets are disabled in world settings.",
+      "badPattern": "Use a concrete image file or a wildcard file pattern (for example token_*.png).",
+      "rollbackIncomplete": "Some changes could not be rolled back. Inspect the token and prototype images and repair them manually if necessary."
+    },
+    "Help": {
+      "quickstart": {
+        "title": "Selecting an image",
+        "body": "Right-click an editable token and choose Cycle Token. By default, the picker shows only the search field, regex toggle and images; click an image to apply it instantly. The GM can enable the full advanced view in Configure Settings. Filtering never changes token data."
+      },
+      "refresh": {
+        "title": "What does Refresh do?",
+        "body": "Refresh checks the configured image folder or wildcard pattern again and bypasses the module’s temporary directory-list cache (normally 15 seconds). Use it after adding, deleting or renaming image files. It does not change any token or Actor image, clear browser image caches, or reset settings."
+      },
+      "destinations": {
+        "title": "Where is the new image applied?",
+        "body": "Selected live token means the token already placed on your current scene. Actor prototype means the source Actor’s default token image, used for future token placements; changing it does not automatically update existing tokens. Other scene tokens (off by default) also updates matching placed tokens of that Actor on the active scene, but only when live-token updates are on. Off-scene tokens are never changed. The destination summary above the gallery shows the enabled effects, not an image-processing status."
+      },
+      "pattern": {
+        "title": "Selecting the right images",
+        "body": "In Actor → Prototype Token → Appearance, optionally save a separate image file or wildcard pattern (for example Body_Hero_*.webp). If empty, the module uses the native randomized wildcard when enabled or the currently selected token image’s directory. Only explicit Save changes the pattern."
+      },
+      "wildcard": {
+        "title": "Native randomized wildcard prototypes",
+        "body": "Foundry native wildcards take priority over optional Runyth image patterns. To use randomized images, set the Actor’s Prototype Token → Appearance → Token Image Path to a wildcard (for example tokens/Hero_*.webp) and enable Randomize Wildcard Images. The module reads matches using Foundry’s wildcard resolver. The default Preserve wildcard prototype policy updates the live token without disabling native randomization. The explicit Use selected image policy disables native randomization when selecting."
+      },
+      "permissions": {
+        "title": "Permissions",
+        "body": "GMs may edit matching tokens. Other players need ownership of both the scene token and the source Actor plus GM permission to use Cycle Token. Image changes are never applied just by installing this module. The Actor portrait is never changed."
+      },
+      "preferences": {
+        "title": "Names, hover tooltips and HUD icons",
+        "body": "Configure Settings controls the advanced/simple layout and image captions (hidden by default). In advanced mode the caption checkbox and Help button also appear inside the picker. Switching layouts preserves your caption preference. The small asterisk button beside search toggles between plain case-insensitive substring matching (default) and case-insensitive regular expressions; the button state is remembered per browser. Invalid or overly complex regex patterns are rejected without changing images. Tooltips show names without extensions by default. Settings also offers HUD icons and independent window layout resets."
+      }
+    },
+    "Layout": {
+      "menuName": "Reset window positions and sizes",
+      "menuLabel": "Open window layout controls",
+      "menuHint": "Reset the picker or Help window separately to its default size and centered location. Settings are personal to this browser.",
+      "description": "Reset a window to its default size and centered position. Help starts square (560 × 560). Custom window geometry is saved when you close each window.",
+      "picker": "Image picker window",
+      "help": "Help window (square default)",
+      "reset": "Reset",
+      "done": "Window layout reset."
+    },
+    "HelpMenu": {
+      "name": "Cycle Token help",
+      "label": "Open help guide",
+      "hint": "Open the resizable Help window, including when the simple image picker is enabled."
+    },
+    "Thumbnail": {
+      "menuName": "Thumbnail dimensions (per player)",
+      "menuLabel": "Configure thumbnail sizes",
+      "menuHint": "Choose linked width and height, or enable separate sliders for each axis. Personal to your user in this world.",
+      "description": "Change how large image previews appear in the token picker. The default slider adjusts width and height together. Images retain their original proportions.",
+      "advanced": "Use separate width and height sliders",
+      "both": "Width and height",
+      "width": "Width",
+      "height": "Height",
+      "hint": "85–245 px per axis. Larger tiles fit fewer images across and down. Changes preview immediately in an open picker without changing token artwork."
+    },
+    "Empty": {
+      "title": "No token images found",
+      "intro": "Configure a source of token images for this Actor:",
+      "open": "Open the Actor sheet, then Prototype Token → Appearance.",
+      "path": "Set Token Image Path to a valid image or wildcard pattern, such as tokens/hero/Body_*.webp.",
+      "wildcard": "For multiple variants, enable Randomize Wildcard Images and keep the wildcard in Token Image Path.",
+      "files": "Place matching PNG, WEBP, JPG, GIF, AVIF or SVG files in the selected Foundry data directory, with permission to browse them.",
+      "reload": "Close and reopen this picker, or use Refresh in the advanced view. Refresh never changes token artwork.",
+      "alternative": "For a non-randomized prototype, put several images beside the current token image, or configure an optional Runyth pattern in the actual Prototype Token Appearance form."
+    }
+  }
+}

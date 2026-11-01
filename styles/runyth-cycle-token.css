@@ -1,0 +1,172 @@
+.runyth-cycle-token-window .window-content { padding: 0; overflow: hidden; }
+.runyth-cycle-token-window .rct-shell { box-sizing: border-box; height: 100%; display: flex; flex-direction: column; gap: .65rem; padding: .85rem; min-width: 0; overflow: hidden; }
+.runyth-cycle-token-window .rct-heading { display: flex; justify-content: space-between; gap: .75rem; flex-wrap: wrap; align-items: center; }
+.runyth-cycle-token-window .rct-heading strong { overflow-wrap: anywhere; }
+.runyth-cycle-token-window .rct-muted { color: var(--color-text-secondary, #999); }
+.runyth-cycle-token-window .rct-toolbar { display: flex; gap: .4rem; flex-wrap: wrap; }
+.runyth-cycle-token-window .rct-button { flex: 1 1 8rem; min-height: 2.2rem; padding: .3rem .5rem; display: inline-flex; align-items: center; justify-content: center; gap: .4rem; white-space: normal; overflow-wrap: anywhere; }
+.runyth-cycle-token-window .rct-button:disabled, .runyth-cycle-token-window .rct-tile:disabled { opacity: .55; cursor: not-allowed; }
+.runyth-cycle-token-window .rct-status { margin: 0; min-height: 1.2em; font-size: .9rem; overflow-wrap: anywhere; }
+.runyth-cycle-token-window .rct-search { box-sizing: border-box; flex: 0 0 auto; width: 100%; min-height: 2rem; }
+.runyth-cycle-token-window .rct-gallery { flex: 1 1 auto; min-height: 0; overflow: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--rct-thumbnail-width, 115px) + 1rem)), 1fr)); grid-auto-rows: max-content; gap: .6rem; align-content: start; padding: .25rem; scrollbar-width: thin; }
+.runyth-cycle-token-window .rct-tile { box-sizing: border-box; min-height: 0; display: flex; flex-direction: column; align-items: center; align-self: start; gap: .3rem; padding: .4rem; overflow: hidden; background: var(--color-cool-5, rgba(80,80,80,.1)); border: 2px solid transparent; border-radius: .4rem; text-align: center; }
+.runyth-cycle-token-window .rct-tile.is-active { border-color: var(--color-border-highlight, #ba8); }
+/* Give the preview a definite block size. Auto height combined with the tile's
+   flex layout allowed the browser to shrink images almost to zero pixels. */
+.runyth-cycle-token-window .rct-tile > img.rct-thumbnail {
+  box-sizing: border-box;
+  display: block;
+  width: min(100%, var(--rct-thumbnail-width, 115px));
+  max-width: 100%;
+  height: var(--rct-thumbnail-height, 115px);
+  min-height: var(--rct-thumbnail-height, 115px);
+  flex: 0 0 auto;
+  object-fit: contain;
+  border-radius: .25rem;
+}
+.runyth-cycle-token-window .rct-filename { max-width: 100%; font-size: .8rem; overflow-wrap: anywhere; line-height: 1.2; }
+.runyth-cycle-token-window .rct-footer { border-top: 1px solid var(--color-border-light, #777); display: flex; flex-direction: column; gap: .25rem; min-width: 0; padding-top: .5rem; }
+.runyth-cycle-token-window .rct-path { overflow-wrap: anywhere; user-select: text; max-height: 3.8rem; overflow: auto; }
+.runyth-cycle-token-window :is(button, input):focus-visible { outline: 2px solid var(--color-border-highlight, #c9a36c); outline-offset: 2px; }
+.runyth-cycle-token-config { box-sizing: border-box; margin-block: 1rem; min-width: 0; }
+.runyth-cycle-token-config label { display: block; margin-bottom: .4rem; font-weight: 600; }
+.runyth-cycle-token-config input { box-sizing: border-box; width: 100%; min-width: 0; }
+.runyth-cycle-token-config p.hint { margin-block: .4rem .8rem; white-space: normal; overflow-wrap: anywhere; }
+.runyth-cycle-token-config .rct-config-buttons { display: flex; flex-wrap: wrap; gap: .5rem; }
+.runyth-cycle-token-config .rct-config-buttons button { flex: 1 1 7rem; min-height: 2rem; overflow-wrap: anywhere; white-space: normal; }
+.control-icon.runyth-cycle-token-hud { cursor: pointer; }
+@media (max-width: 570px) { .runyth-cycle-token-window .rct-shell { padding: .5rem; gap: .4rem; } .runyth-cycle-token-window .rct-toolbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); } .runyth-cycle-token-window .rct-button { min-width: 0; } }
+
+.runyth-cycle-token-window .rct-more { grid-column: 1 / -1; min-height: 2.4rem; }
+/* User-facing destination explanation remains legible at narrow window sizes. */
+.runyth-cycle-token-window .rct-destinations { display: grid; gap: .2rem; font-size: .85rem; line-height: 1.35; }
+.runyth-cycle-token-window .rct-destinations p { margin: 0; overflow-wrap: anywhere; }
+.runyth-cycle-token-window .rct-status:empty { display: none; }
+.runyth-cycle-token-window .rct-names-toggle { display: inline-flex; gap: .45rem; align-items: center; flex: 0 0 auto; font-size: .9rem; cursor: pointer; }
+.runyth-cycle-token-window .rct-names-toggle input { margin: 0; }
+/* Grid rows follow the definite preview height plus optional captions. */
+.runyth-cycle-token-help .window-content { overflow: auto; padding: 0; }
+.runyth-cycle-token-help .rct-help-content { box-sizing: border-box; padding: 1rem; min-width: 0; display: grid; gap: .8rem; line-height: 1.5; overflow-wrap: anywhere; }
+.runyth-cycle-token-help .rct-help-content section { min-width: 0; border-bottom: 1px solid var(--color-border-light, #7775); padding-bottom: .65rem; }
+.runyth-cycle-token-help .rct-help-content h3 { font-size: 1.05rem; margin: 0 0 .3rem; }
+.runyth-cycle-token-help .rct-help-content p { margin: 0; white-space: normal; }
+.runyth-cycle-token-help .rct-help-content button { min-height: 2.3rem; justify-self: end; }
+.runyth-cycle-token-layout .window-content { overflow: auto; }
+.runyth-cycle-token-layout .rct-layout-settings { display: grid; gap: .75rem; padding: .7rem; }
+.runyth-cycle-token-layout .rct-layout-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.runyth-cycle-token-layout .rct-layout-row button { min-height: 2.3rem; flex: 0 1 auto; }
+.control-icon.runyth-cycle-token-hud { display: flex; align-items: center; justify-content: center; }
+.control-icon.runyth-cycle-token-hud .rct-hud-svg { display: block; width: 80%; height: 80%; object-fit: contain; }
+.control-icon.runyth-cycle-token-hud .rct-hud-emoji { display: inline-block; font-size: 1.35rem; line-height: 1; }
+
+/* Default minimal picker: only compact search/filter and the image gallery. */
+.runyth-cycle-token-window .rct-shell.rct-simple { gap: .4rem; padding: .5rem; }
+.runyth-cycle-token-window .rct-search-row { display: flex; align-items: stretch; gap: .3rem; flex: 0 0 auto; min-width: 0; }
+.runyth-cycle-token-window .rct-search-row .rct-search { flex: 1 1 auto; min-width: 0; width: auto; }
+.runyth-cycle-token-window .rct-regex-toggle { flex: 0 0 2.25rem; width: 2.25rem; min-width: 2.25rem; min-height: 2.25rem; padding: 0; display: grid; place-items: center; line-height: 1; cursor: pointer; }
+/* Use the actual accessible pressed state as the styling source of truth.
+   Foundry's default button palette can hide subtle dark-on-dark highlights. */
+.runyth-cycle-token-window .rct-shell button.rct-regex-toggle[aria-pressed="true"],
+.runyth-cycle-token-window .rct-shell button.rct-regex-toggle[aria-pressed="true"]:is(:hover, :focus-visible) {
+  background: var(--color-border-highlight, #c9a36c);
+  border: 2px solid var(--color-border-highlight, #c9a36c);
+  color: var(--color-text-dark-primary, #1b160e);
+  box-shadow: inset 0 0 0 1px var(--color-text-dark-primary, #1b160e), 0 0 0 1px var(--color-border-highlight, #c9a36c);
+}
+.runyth-cycle-token-window .rct-shell button.rct-regex-toggle[aria-pressed="true"]:disabled {
+  opacity: 1;
+}
+.runyth-cycle-token-window .rct-search[aria-invalid="true"] { outline: 2px solid var(--color-level-error, #c45); outline-offset: -2px; }
+.runyth-cycle-token-window .rct-search-error { grid-column: 1 / -1; margin: .25rem; color: var(--color-level-error, #c45); overflow-wrap: anywhere; }
+
+/* Personal thumbnail configuration submenu, responsive without layout hacks. */
+.runyth-cycle-token-thumbnail-settings .window-content { padding: 0; overflow: auto; }
+.runyth-cycle-token-thumbnail-settings .rct-size-controls { display: grid; align-content: start; gap: .85rem; padding: 1rem; box-sizing: border-box; min-width: 0; }
+.runyth-cycle-token-thumbnail-settings .rct-size-controls p { margin: 0; line-height: 1.45; overflow-wrap: anywhere; }
+.runyth-cycle-token-thumbnail-settings .rct-size-toggle { display: flex; gap: .6rem; align-items: center; cursor: pointer; }
+.runyth-cycle-token-thumbnail-settings .rct-size-slider { display: grid; gap: .3rem; min-width: 0; }
+.runyth-cycle-token-thumbnail-settings .rct-size-slider label { display: flex; justify-content: space-between; gap: .5rem; font-weight: 600; }
+.runyth-cycle-token-thumbnail-settings .rct-size-slider input { width: 100%; min-width: 0; cursor: pointer; }
+.runyth-cycle-token-thumbnail-settings .rct-size-slider input:disabled { cursor: wait; opacity: .65; }
+.runyth-cycle-token-thumbnail-settings .rct-size-controls [hidden] { display: none; }
+
+/* Inline setup guidance appears only when the resolved image gallery is empty. */
+.runyth-cycle-token-window .rct-empty-guide {
+  grid-column: 1 / -1; min-width: 0; box-sizing: border-box;
+  padding: .8rem; border-radius: .5rem; line-height: 1.45;
+  background: var(--color-cool-5, rgba(80,80,80,.15));
+  border: 1px solid var(--color-border-light, #7776);
+  overflow-wrap: anywhere; user-select: text;
+}
+.runyth-cycle-token-window .rct-empty-guide strong { display: block; margin-bottom: .4rem; }
+.runyth-cycle-token-window .rct-empty-guide p { margin: .35rem 0; }
+.runyth-cycle-token-window .rct-empty-guide ol { margin: .4rem 0; padding-left: 1.5rem; }
+.runyth-cycle-token-window .rct-empty-guide li { padding: .18rem 0; }
+/* Never allow Runyth's optional settings fieldset to affect a navigation tab. */
+.runyth-cycle-token-config { max-width: 100%; overflow-wrap: anywhere; }
+
+/* Release 0.2.4: Foundry themes commonly impose a one-line button height.
+   A thumbnail is an interactive button, but MUST NOT inherit that sizing.
+   The grid track accommodates a whole image viewport plus tile padding;
+   captions expand the tile rather than cropping or squeezing the image. */
+.runyth-cycle-token-window .rct-gallery > button.rct-tile {
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  height: max-content !important;
+  min-height: calc(var(--rct-thumbnail-height, 115px) + .8rem + 4px) !important;
+  max-height: none !important;
+  max-width: none;
+  flex: none;
+  align-self: start;
+  justify-content: flex-start;
+  white-space: normal;
+  line-height: normal;
+}
+.runyth-cycle-token-window .rct-gallery > button.rct-tile > img.rct-thumbnail {
+  width: min(100%, var(--rct-thumbnail-width, 115px));
+  height: var(--rct-thumbnail-height, 115px);
+  min-height: var(--rct-thumbnail-height, 115px);
+  max-height: none;
+  flex-shrink: 0;
+}
+/* The per-player opacity slider controls only the window's BACKDROP.
+   Applying opacity to the ApplicationV2 frame would fade every descendant,
+   including token art and interactive buttons. A separate paint layer keeps
+   thumbnails, labels and controls fully opaque even with a 0% backdrop. */
+.runyth-cycle-token-window {
+  --rct-window-surface-opacity: 1;
+  isolation: isolate;
+  background: transparent !important;
+}
+.runyth-cycle-token-window::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: var(--background, var(--color-bg, #202126));
+  opacity: var(--rct-window-surface-opacity);
+}
+.runyth-cycle-token-window > .window-header,
+.runyth-cycle-token-window > .window-content {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+/* With the backing surface entirely transparent, remove the window chrome's
+   shadow/border too. Controls and the thumbnail art remain visible. */
+.runyth-cycle-token-window.rct-window-transparent {
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+.runyth-cycle-token-window.rct-window-transparent > .window-header {
+  border-color: transparent !important;
+}
+/* Zero means no window or tile backing surface, not invisible artwork. */
+.runyth-cycle-token-window.rct-window-transparent .rct-gallery > button.rct-tile,
+.runyth-cycle-token-window.rct-window-transparent .rct-empty-guide {
+  background: transparent !important;
+}
