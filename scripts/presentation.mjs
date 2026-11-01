@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { basename, IMAGE_EXTENSIONS } from "./core.mjs";
 
 /** File display text is independent of storage paths, URLs and query strings. */

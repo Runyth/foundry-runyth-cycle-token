@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 """Chromium regression: backing window transparency never fades images/buttons.
 
 Run `python3 tools/check-opacity-browser.py` with local Chromium and Playwright.

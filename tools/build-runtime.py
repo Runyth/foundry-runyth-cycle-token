@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 """Build an offline, self-contained Foundry ES module from local source modules.
 
 No npm dependency or runtime network import is needed. The input grammar is
@@ -63,7 +65,9 @@ def build() -> str:
     parts.append(f'__factories["./{path.name}"] = (__require, __exports) => {{\n{source.rstrip()}\n{export_code}\n}};')
 
   fingerprint = hashlib.sha256("\n".join(fingerprints).encode()).hexdigest()
-  return ("// GENERATED FILE. DO NOT EDIT. Run: python3 tools/build-runtime.py\n"
+  return ("// SPDX-License-Identifier: AGPL-3.0-or-later\n"
+          "// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.\n"
+          "// GENERATED FILE. DO NOT EDIT. Run: python3 tools/build-runtime.py\n"
           "// Foundry loads this single module; there are no relative browser requests.\n"
           f"// Source fingerprint: {fingerprint}\n"
           "const __factories = Object.create(null);\n"

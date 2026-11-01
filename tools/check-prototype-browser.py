@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 """Run a real Chromium DOM regression for the Prototype Token Appearance tab.
 
 Mock only Foundry globals/hooks; execute the shipped single-file runtime itself.

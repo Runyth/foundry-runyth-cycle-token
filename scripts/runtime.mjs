@@ -1,6 +1,8 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 // GENERATED FILE. DO NOT EDIT. Run: python3 tools/build-runtime.py
 // Foundry loads this single module; there are no relative browser requests.
-// Source fingerprint: 46d7f366fad3b5c31383ecb08b99c1edca49b6e368559db2af26a006ee6b75f0
+// Source fingerprint: 5c2faa62edc630589fd0f3ba0972e4b78083a5ee4d213bfcccdd089e8c0c756f
 const __factories = Object.create(null);
 const __cache = Object.create(null);
 function __require(key) {
@@ -14,6 +16,8 @@ function __require(key) {
 }
 
 __factories["./config.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID} = __require("./core.mjs");
 const {saveActorPattern} = __require("./service.mjs");
 const {readSettings} = __require("./settings.mjs");
@@ -90,6 +94,8 @@ function renderPrototypeSettings(app, html) {
 };
 
 __factories["./core.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 /** Pure helpers used by the Runyth Cycle Token runtime and tests. */
 const MODULE_ID = "runyth-cycle-token";
 const IMAGE_EXTENSIONS = Object.freeze([".avif", ".gif", ".jpeg", ".jpg", ".png", ".svg", ".webp"]);
@@ -187,6 +193,8 @@ function policy(settings) {
 };
 
 __factories["./help.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID} = __require("./core.mjs");
 const {RememberedWindow} = __require("./layout.mjs");
 const t = key => game.i18n.localize(`RCT.${key}`);
@@ -235,6 +243,8 @@ async function openHelp() {
 };
 
 __factories["./hud-icons.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID} = __require("./core.mjs");
 /** Fixed allowlist: icon setting values are never interpreted as arbitrary HTML or URLs. */
 const HUD_ICON_CHOICES = Object.freeze({
@@ -306,6 +316,8 @@ function updateVisibleHudIcons(iconKey) {
 };
 
 __factories["./hud-order.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 /**
  * Place this module's own HUD control adjacent to Runyth Cycle Portrait.
  *
@@ -443,6 +455,8 @@ function syncPortraitHudOrder(hud, button) {
 };
 
 __factories["./layout.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID} = __require("./core.mjs");
 const { ApplicationV2 } = foundry.applications.api;
 const openWindows = new Set();
@@ -566,6 +580,8 @@ class WindowLayoutSettings extends ApplicationV2 {
 };
 
 __factories["./main.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID} = __require("./core.mjs");
 const {registerSettings, readSettings, migrateAdvancedMenuPreference} = __require("./settings.mjs");
 const {CycleTokenWindow} = __require("./window.mjs");
@@ -640,6 +656,8 @@ Hooks.on("canvasTearDown", () => {
 };
 
 __factories["./presentation.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {basename, IMAGE_EXTENSIONS} = __require("./core.mjs");
 /** File display text is independent of storage paths, URLs and query strings. */
 function imageDisplayName(path) {
@@ -673,6 +691,8 @@ function affectedTargets(settings, nativeRandom = false) {
 };
 
 __factories["./search.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {basename} = __require("./core.mjs");
 // Compile at most once per filter change. Limit expensive patterns so a
 // typo cannot lock a token HUD containing hundreds of image paths.
@@ -706,6 +726,8 @@ function filterImagePaths(paths, query, regex = false) {
 };
 
 __factories["./service.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID, assertAssetPath, hasWildcard, inferSource, isImage, normalizedImages, nextImage, policy} = __require("./core.mjs");
 const {readSettings} = __require("./settings.mjs");
 // Actor-scoped serialization prevents two tokens of the same Actor from racing to update its prototype.
@@ -967,6 +989,8 @@ async function saveActorPattern(actor, pattern) {
 };
 
 __factories["./settings.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID} = __require("./core.mjs");
 const {HUD_ICON_CHOICES, updateVisibleHudIcons} = __require("./hud-icons.mjs");
 // Foundry v13 supports user scope: a player preference within this World,
@@ -1199,6 +1223,8 @@ function readSettings() {
 };
 
 __factories["./thumbnail-settings.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID} = __require("./core.mjs");
 const {THUMBNAIL_SIZE, normalizedThumbnailSize, readThumbnailPreferences, thumbnailDimensions, updateVisibleThumbnailSize} = __require("./settings.mjs");
 const { ApplicationV2 } = foundry.applications.api;
@@ -1328,6 +1354,8 @@ class ThumbnailSettingsWindow extends ApplicationV2 {
 };
 
 __factories["./window.mjs"] = (__require, __exports) => {
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 const {MODULE_ID} = __require("./core.mjs");
 const {RememberedWindow} = __require("./layout.mjs");
 const {openHelp} = __require("./help.mjs");
