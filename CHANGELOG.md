@@ -1,5 +1,13 @@
 ## 0.2.6 — Patch (2026-11-01)
 
+First publication as a Runyth module (Runyth Cycle Token keeps its id, title, npm package, and workspace identity for this release).
+
+### Publication
+
+- Joined the Runyth publication standard: deterministic installable `-mod`, source `-src`, and documentation `-doc` archives with per-version SHA256 checksums, byte-identical rebuild verification, publication scanning, and the standard quality and release pipelines on Node 24.
+- The program stays `AGPL-3.0-or-later` with the standard two-line source notice on every program source, including the freshly generated runtime bundle; the README carries the standard licence chapter.
+- The generated runtime bundle now carries the licence notice as its first lines, and the static hygienics test pins that head; runtime behaviour is unchanged.
+
 ### Fixed
 
 - Corrected the unreliable placement of the Cycle Token 🃏 HUD button relative to Runyth Cycle Portrait. The v0.2.5 implementation recognized little beyond a literal 🎭 glyph or specific tooltip text; an icon-only or differently localized Portrait control could not be found.

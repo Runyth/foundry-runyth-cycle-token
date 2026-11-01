@@ -65,7 +65,7 @@ for (const relativePath of requiredFiles) {
 
 // The shipped runtime bundle is generated and self-contained: no browser module loads.
 const runtime = readFileSync(path.join(root, "scripts/runtime.mjs"), "utf8");
-assert(runtime.startsWith("// GENERATED FILE. DO NOT EDIT. Run: python3 tools/build-runtime.py"), "runtime bundle banner");
+assert(runtime.startsWith("// SPDX-License-Identifier: AGPL-3.0-or-later\n// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.\n// GENERATED FILE. DO NOT EDIT. Run: python3 tools/build-runtime.py"), "runtime bundle notice and banner");
 for (const line of runtime.split("\n")) {
   const trimmed = line.trimStart();
   assert(!trimmed.startsWith("import "), "runtime bundle must not start an import statement");

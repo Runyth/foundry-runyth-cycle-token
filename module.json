@@ -5,7 +5,8 @@
   "version": "0.2.6",
   "authors": [
     {
-      "name": "Runyth"
+      "name": "Runyth",
+      "url": "https://github.com/Runyth"
     }
   ],
   "compatibility": {
@@ -15,6 +16,12 @@
   "esmodules": [
     "scripts/runtime.mjs"
   ],
+  "license": "LICENSE",
+  "readme": "README.md",
+  "url": "https://github.com/Runyth/foundry-runyth-cycle-token",
+  "manifest": "https://github.com/Runyth/foundry-runyth-cycle-token/releases/latest/download/module.json",
+  "download": "https://github.com/Runyth/foundry-runyth-cycle-token/releases/download/v0.2.6/runyth-cycle-token-v0.2.6-mod.zip",
+  "changelog": "CHANGELOG.md",
   "styles": [
     "styles/runyth-cycle-token.css"
   ],
@@ -29,6 +36,5 @@
       "name": "Deutsch",
       "path": "lang/de.json"
     }
-  ],
-  "license": "LICENSE"
+  ]
 }
