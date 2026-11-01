@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import { basename } from "./core.mjs";
 
 // Compile at most once per filter change. Limit expensive patterns so a

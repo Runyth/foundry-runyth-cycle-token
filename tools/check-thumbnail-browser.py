@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 """Optional Chromium CSS regression test (Python Playwright + local Chromium).
 
 Checks pixel geometry against an actual browser layout engine. No browser code

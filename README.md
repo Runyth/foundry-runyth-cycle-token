@@ -3,7 +3,7 @@
 **Version:** 0.2.6
 **Foundry:** v13 (target: v13.351)  
 **Systems:** system-agnostic (intended for D&D5e 5.3.3 and other Foundry v13 systems)  
-**License:** GPL-3.0-or-later
+**License:** AGPL-3.0-or-later
 
 Cycle or directly select a token's visual artwork from its Token HUD. This is a standalone companion to **Runyth Cycle Portrait**: **Cycle Token changes token textures, not character portraits**, and requires neither Cycle Portrait nor Image Hover.
 
@@ -150,3 +150,19 @@ Use Node.js 20+ to run `npm run check` in the source directory (57 mocked/static
 - [Foundry v13 FilePicker API](https://foundryvtt.com/api/v13/classes/foundry.applications.apps.FilePicker.html)
 - [Foundry v13 TokenDocument API](https://foundryvtt.com/api/v13/classes/foundry.documents.TokenDocument.html)
 - [Foundry v13 Actor API](https://foundryvtt.com/api/v13/classes/foundry.documents.Actor.html)
+
+## Licence
+Copyright © 2026  [Daniel Braniewski](https://brani.dev/)
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 """Chromium smoke test of the DISTRIBUTED single-file HUD code and setting registration.
 
 Uses a synthetic Foundry HUD and engine globals. This is not a complete live

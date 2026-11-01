@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, readdir } from "node:fs/promises";
@@ -38,7 +40,7 @@ test("compiled runtime and module manifest agree with shipped entry", async () =
   const manifest = JSON.parse(await readFile(join(root, "module.json"), "utf8"));
   assert.deepEqual(manifest.esmodules, ["scripts/runtime.mjs"]);
   const runtime = await readFile(join(root, manifest.esmodules[0]), "utf8");
-  assert.match(runtime, /^\/\/ GENERATED FILE/);
+  assert.match(runtime, /^\/\/ SPDX-License-Identifier: AGPL-3\.0-or-later\n\/\/ Copyright \(C\) 2026 Daniel Braniewski\. See the LICENSE file for rights and obligations\.\n\/\/ GENERATED FILE/);
   assert.doesNotMatch(runtime, /^\s*(?:import|export)\s/m);
   assert.doesNotMatch(runtime, /\bimport\s*\(/);
 });

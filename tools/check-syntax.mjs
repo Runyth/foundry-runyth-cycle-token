@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Daniel Braniewski. See the LICENSE file for rights and obligations.
 /** Dependency-free, cross-platform syntax verification of every runtime module. */
 import { readdirSync } from "node:fs";
 import { spawnSync } from "node:child_process";
