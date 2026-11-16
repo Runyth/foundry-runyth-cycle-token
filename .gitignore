@@ -3,3 +3,13 @@ coverage/
 *.zip
 .DS_Store
 dist/
+# --- Runyth template managed (begin) ---
+.nyc_output/
+.cache/
+.runyth-template-source/
+*.log
+.env
+.env.*
+!.env.example
+Thumbs.db
+# --- Runyth template managed (end) ---

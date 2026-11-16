@@ -1,8 +1,8 @@
 # Runyth Cycle Token
 
 **Version:** 0.2.6
-**Foundry:** v13 (target: v13.351)  
-**Systems:** system-agnostic (intended for D&D5e 5.3.3 and other Foundry v13 systems)  
+**Foundry:** v13 (target: v13.351)
+**Systems:** system-agnostic (intended for D&D5e 5.3.3 and other Foundry v13 systems)
 **License:** AGPL-3.0-or-later
 
 Cycle or directly select a token's visual artwork from its Token HUD. This is a standalone companion to **Runyth Cycle Portrait**: **Cycle Token changes token textures, not character portraits**, and requires neither Cycle Portrait nor Image Hover.
